@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Argentina: costumbres, sabores e historia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f1;--ink:#14263d;--muted:#51627a;--cel:#74acdf;--celd:#2d6ea8;--sun:#f6b40e;--card:#ffffff;--line:#d9e3ee;--wine:#6e1f36;--band:#e6f1fa;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a2a;--ink:#eef3f9;--muted:#9fb2c8;--cel:#74acdf;--celd:#8cc0ee;--card:#15263a;--line:#27405a;--wine:#e08aa3;--band:#12263b}}
+:root[data-theme="dark"]{--bg:#0e1a2a;--ink:#eef3f9;--muted:#9fb2c8;--cel:#74acdf;--celd:#8cc0ee;--card:#15263a;--line:#27405a;--wine:#e08aa3;--band:#12263b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.65 "Newsreader",Georgia,serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--celd)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+/* hero: bandera */
+.hero{display:grid;grid-template-rows:1fr auto 1fr;min-height:92vh;min-height:92svh}
+.hero .b{background:var(--cel)}
+.hero .mid{background:#fff;color:#14263d;position:relative;overflow:hidden;padding:2.5rem 1.25rem;text-align:center}
+.sun{position:absolute;left:50%;top:50%;width:min(520px,95vw);aspect-ratio:1;translate:-50% -50%;border-radius:50%;opacity:.5;
+background:repeating-conic-gradient(from 0deg,#f6b40e 0 5deg,transparent 5deg 15deg);-webkit-mask:radial-gradient(circle,transparent 22%,#000 23%,#000 70%,transparent 71%);mask:radial-gradient(circle,transparent 22%,#000 23%,#000 70%,transparent 71%);animation:giro 90s linear infinite}
+.sun::after{content:"";position:absolute;inset:34%;border-radius:50%;background:#f6b40e}
+@keyframes giro{to{rotate:360deg}}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}html{scroll-behavior:auto}}
+.hero h1{position:relative;font-size:clamp(3.4rem,15vw,9.5rem);font-weight:800;letter-spacing:-.03em}
+.hero p{position:relative;margin:.75rem auto 0;max-width:34ch;font-style:italic;font-size:1.25rem;color:#33475f}
+.hero .b{display:flex;align-items:flex-end;padding:1rem 1.25rem}
+.hero .b.top{align-items:flex-start}
+.hero nav{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;font:500 .95rem "Bricolage Grotesque",Arial,sans-serif}
+.hero nav a{color:#0e2237;text-decoration:none;border-bottom:2px solid transparent}
+.hero nav a:hover{border-color:#0e2237}
+section{padding:4.5rem 0 1rem}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:.6rem;letter-spacing:-.02em}
+.lead{max-width:62ch;color:var(--muted);margin:0 0 2rem}
+/* datos */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));border-top:3px solid var(--cel)}
+.facts div{padding:1.1rem 1rem 1.1rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font:500 .9rem "Bricolage Grotesque",Arial,sans-serif;color:var(--muted)}
+.facts dd{margin:.15rem 0 0;font:800 1.5rem/1.2 "Bricolage Grotesque",Arial,sans-serif}
+.facts{margin:0}
+/* regiones */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.tabs button{font:500 1rem "Bricolage Grotesque",Arial,sans-serif;padding:.55rem 1rem;border:2px solid var(--cel);background:transparent;color:var(--ink);border-radius:99px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--cel);color:#0e2237}
+.panel{background:var(--band);border-left:6px solid var(--sun);padding:1.5rem;max-width:760px}
+.panel h3{font-size:1.6rem;margin-bottom:.4rem}
+.panel p{margin:.4rem 0}
+/* costumbres */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem 2.5rem}
+.cols h3{font-size:1.35rem;margin-bottom:.3rem;color:var(--celd)}
+.cols p{margin:0}
+/* comidas */
+.foods{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.food{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--wine);padding:1.1rem 1.2rem;border-radius:4px}
+.food:nth-child(3n+2){border-top-color:var(--sun)}
+.food:nth-child(3n){border-top-color:var(--cel)}
+.food h3{font-size:1.25rem;margin-bottom:.25rem}
+.food p{margin:0;font-size:1rem;color:var(--muted);line-height:1.5}
+/* historia */
+.tl{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:3px solid var(--cel);max-width:760px}
+.tl li{position:relative;padding:0 0 1.4rem 1.2rem}
+.tl li::before{content:"";position:absolute;left:-2.1rem;top:.5rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--sun);border:3px solid var(--bg)}
+.tl b{font:800 1.25rem "Bricolage Grotesque",Arial,sans-serif;margin-right:.5rem}
+/* lugares */
+.places{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
+.places h3{font-size:1.2rem;margin-bottom:.2rem}
+.places p{margin:0;font-size:1rem;color:var(--muted);line-height:1.5}
+.places div{border-top:1px solid var(--line);padding-top:.8rem}
+footer{margin-top:5rem;background:var(--cel);color:#0e2237;padding:2rem 1.25rem;text-align:center;font:500 1rem "Bricolage Grotesque",Arial,sans-serif}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="b top"><nav aria-label="Secciones">
+    <a href="#datos">Datos</a><a href="#regiones">Regiones</a><a href="#costumbres">Costumbres</a><a href="#comidas">Comidas</a><a href="#cultura">Cultura</a><a href="#historia">Historia</a><a href="#lugares">Lugares</a>
+  </nav></div>
+  <div class="mid">
+    <div class="sun" aria-hidden="true"></div>
+    <h1>Argentina</h1>
+    <p>Del Aconcagua al fin del mundo: un país para recorrer con mate en mano.</p>
+  </div>
+  <div class="b"></div>
+</header>
+
+<main class="wrap">
+<section id="datos">
+  <h2>Lo esencial</h2>
+  <p class="lead">Argentina es el segundo país más grande de Sudamérica y el octavo del mundo por superficie. Se extiende desde los trópicos hasta la Antártida.</p>
+  <dl class="facts">
+    <div><dt>Capital</dt><dd>Buenos Aires</dd></div>
+    <div><dt>Población</dt><dd>Unos 46 millones</dd></div>
+    <div><dt>Superficie</dt><dd>2,78 millones de km²</dd></div>
+    <div><dt>Idioma</dt><dd>Español rioplatense</dd></div>
+    <div><dt>Moneda</dt><dd>Peso argentino</dd></div>
+    <div><dt>Organización</dt><dd>23 provincias y CABA</dd></div>
+    <div><dt>Punto más alto</dt><dd>Aconcagua, 6.961 m</dd></div>
+    <div><dt>Día de la Independencia</dt><dd>9 de julio</dd></div>
+  </dl>
+</section>
+
+<section id="regiones">
+  <h2>Cinco regiones, cinco países</h2>
+  <p class="lead">El territorio es tan variado que cada región tiene su propio paisaje, su música y su cocina.</p>
+  <div class="tabs" role="tablist" aria-label="Regiones"></div>
+  <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+</section>
+
+<section id="costumbres">
+  <h2>Costumbres</h2>
+  <p class="lead">Lo que define la vida cotidiana argentina pasa, casi siempre, alrededor de una mesa.</p>
+  <div class="cols">
+    <div><h3>El mate</h3><p>Se toma a toda hora y se comparte en rueda: una sola calabaza y una sola bombilla que pasan de mano en mano. Rechazar una ronda sin decir "gracias" se entiende como un desaire.</p></div>
+    <div><h3>El asado del domingo</h3><p>Más que una comida, es un ritual. Una persona, el asador, se hace cargo de la parrilla y el resto conversa durante horas hasta que la carne está lista.</p></div>
+    <div><h3>La sobremesa</h3><p>Terminar de comer no significa levantarse. Se sigue charlando con café o un trago, y las cenas suelen empezar pasadas las 21 h.</p></div>
+    <div><h3>El saludo</h3><p>Un beso en la mejilla, incluso entre hombres amigos y familiares, y también al conocer a alguien en un ambiente informal.</p></div>
+    <div><h3>El fútbol</h3><p>Boca, River, Independiente, Racing y San Lorenzo despiertan pasiones que atraviesan generaciones. Ser hincha se hereda, y la Selección unió al país en el Mundial de 2022.</p></div>
+    <div><h3>Fechas con tradición</h3><p>Los ñoquis del 29, el Día del Amigo (20 de julio), el Día de la Tradición (10 de noviembre) y los carnavales del norte y del litoral marcan el calendario.</p></div>
+    <div><h3>El gaucho y las peñas</h3><p>El gaucho es símbolo de la vida rural en la pampa. En las peñas se reúnen músicos y vecinos a tocar folklore, comer empanadas y cantar hasta tarde.</p></div>
+    <div><h3>El voseo</h3><p>Se dice "vos" en lugar de "tú" y el lunfardo, la jerga nacida en Buenos Aires, aporta palabras como <i>laburo</i>, <i>pibe</i>, <i>mango</i> y <i>che</i>.</p></div>
+  </div>
+</section>
+
+<section id="comidas">
+  <h2>Comidas y bebidas típicas</h2>
+  <p class="lead">La cocina mezcla la herencia criolla e indígena con la inmigración italiana y española.</p>
+  <div class="foods">
+    <article class="food"><h3>Asado</h3><p>Cortes de vaca a la parrilla: tira de asado, vacío, entraña, chorizo y morcilla.</p></article>
+    <article class="food"><h3>Empanadas</h3><p>Rellenas de carne, pollo, jamón y queso o humita. Las de Tucumán y Salta son famosas.</p></article>
+    <article class="food"><h3>Locro</h3><p>Guiso espeso de maíz, porotos y carne, típico del 25 de Mayo y del 9 de Julio.</p></article>
+    <article class="food"><h3>Milanesa a la napolitana</h3><p>Carne rebozada con salsa de tomate, jamón y queso. Se come con papas fritas.</p></article>
+    <article class="food"><h3>Choripán</h3><p>Chorizo en pan con chimichurri, la comida de cancha y de plaza por excelencia.</p></article>
+    <article class="food"><h3>Provoleta</h3><p>Queso provolone derretido a la parrilla con orégano. Va siempre antes de la carne.</p></article>
+    <article class="food"><h3>Pizza y fugazzeta</h3><p>La pizza porteña, gruesa y con mucho queso, y la fugazzeta rellena con cebolla.</p></article>
+    <article class="food"><h3>Chipá y sopa paraguaya</h3><p>Panes de queso y almidón de mandioca, típicos de Corrientes y Misiones.</p></article>
+    <article class="food"><h3>Humita y tamales</h3><p>Preparaciones de choclo y maíz del noroeste, cocidas en su propia hoja.</p></article>
+    <article class="food"><h3>Dulce de leche</h3><p>El sabor más argentino: sobre tostadas, en panqueques, helados y alfajores.</p></article>
+    <article class="food"><h3>Alfajores y medialunas</h3><p>El alfajor de maicena o de chocolate y las medialunas de manteca, infaltables en el café.</p></article>
+    <article class="food"><h3>Bebidas</h3><p>Yerba mate, Malbec de Mendoza, Torrontés de Salta, fernet con coca y vermut.</p></article>
+  </div>
+</section>
+
+<section id="cultura">
+  <h2>Música, arte y letras</h2>
+  <p class="lead">Una cultura que exportó géneros, escritores y científicos.</p>
+  <div class="cols">
+    <div><h3>Tango</h3><p>Nació en el Río de la Plata a fines del siglo XIX. Gardel, Piazzolla y Troilo son sus nombres mayores, y la UNESCO lo declaró Patrimonio Inmaterial en 2009 junto con Uruguay.</p></div>
+    <div><h3>Folklore</h3><p>La zamba, la chacarera, el carnavalito y el chamamé del litoral. Mercedes Sosa, Atahualpa Yupanqui y Los Chalchaleros lo llevaron por el mundo; el chamamé fue reconocido por la UNESCO en 2020.</p></div>
+    <div><h3>Rock nacional</h3><p>Charly García, Luis Alberto Spinetta, Gustavo Cerati y Soda Stereo hicieron del rock en español un movimiento propio.</p></div>
+    <div><h3>Literatura</h3><p>Borges, Cortázar, Sabato, Silvina Ocampo y Alfonsina Storni. Mafalda, de Quino, es la tira cómica más querida del país.</p></div>
+    <div><h3>Ciencia</h3><p>Cinco argentinos recibieron un Nobel: Saavedra Lamas, Houssay, Leloir, Milstein y Pérez Esquivel. Tres de ellos fueron en ciencias.</p></div>
+    <div><h3>Deporte</h3><p>Maradona y Messi son figuras globales. Argentina ganó el Mundial de fútbol en 1978, 1986 y 2022, y es potencia en rugby, básquet, polo y hockey.</p></div>
+  </div>
+</section>
+
+<section id="historia">
+  <h2>Historia en pocas fechas</h2>
+  <ol class="tl">
+    <li><b>Antes de 1500</b>Pueblos como los diaguitas, guaraníes, mapuches y tehuelches habitaban el territorio.</li>
+    <li><b>1536 y 1580</b>Se funda Buenos Aires, por primera vez y definitivamente, bajo dominio español.</li>
+    <li><b>1810</b>La Revolución de Mayo inicia el camino hacia la independencia.</li>
+    <li><b>1816</b>El Congreso de Tucumán declara la independencia el 9 de julio.</li>
+    <li><b>1853</b>Se sanciona la Constitución Nacional.</li>
+    <li><b>1880 a 1914</b>Millones de inmigrantes, sobre todo italianos y españoles, llegan al país y lo transforman.</li>
+    <li><b>1983</b>Vuelve la democracia, que continúa hasta hoy.</li>
+  </ol>
+</section>
+
+<section id="lugares">
+  <h2>Lugares imperdibles</h2>
+  <div class="places">
+    <div><h3>Buenos Aires</h3><p>Teatro Colón, San Telmo, La Boca, Recoleta y las milongas.</p></div>
+    <div><h3>Cataratas del Iguazú</h3><p>Más de 270 saltos en plena selva misionera.</p></div>
+    <div><h3>Glaciar Perito Moreno</h3><p>Un enorme frente de hielo en Santa Cruz que se puede ver de cerca.</p></div>
+    <div><h3>Quebrada de Humahuaca</h3><p>Montañas de colores y pueblos andinos en Jujuy, Patrimonio de la Humanidad.</p></div>
+    <div><h3>Mendoza</h3><p>Viñedos con la cordillera de fondo y ruta del vino.</p></div>
+    <div><h3>Bariloche</h3><p>Lagos, bosques y chocolate en la Patagonia andina.</p></div>
+    <div><h3>Península Valdés</h3><p>Ballenas francas, lobos marinos y pingüinos.</p></div>
+    <div><h3>Ushuaia</h3><p>La ciudad más austral del mundo, en Tierra del Fuego.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>Argentina · Una página para conocer el país</footer>
+
+<script>
+var R=[
+["Noroeste","Salta, Jujuy, Tucumán, Catamarca","Altiplano, quebradas y valles calchaquíes. Huella andina muy fuerte: locro, humita, empanadas y la fiesta de la Pachamama. Es la cuna de la zamba y la chacarera."],
+["Noreste o Litoral","Misiones, Corrientes, Chaco, Formosa, Entre Ríos","Selva, esteros y grandes ríos como el Paraná. Aquí se habla guaraní, se toma tereré y se baila chamamé. Las Cataratas del Iguazú y los Esteros del Iberá son sus tesoros."],
+["Cuyo","Mendoza, San Juan, San Luis","Al pie de la cordillera, con sol casi todo el año. Es la capital del Malbec y de la Fiesta Nacional de la Vendimia. Aquí está el Aconcagua."],
+["Pampa","Buenos Aires, Córdoba, Santa Fe, La Pampa","La llanura fértil que alimenta al país y al mundo. Tierra de gauchos, estancias, ganadería y soja. Concentra la mayor parte de la población."],
+["Patagonia","Neuquén, Río Negro, Chubut, Santa Cruz, Tierra del Fuego","Estepas, lagos, glaciares y fauna marina. Hay colonias galesas en Chubut con casas de té, cordero patagónico y los paisajes más australes del continente."]
+];
+var tabs=document.querySelector(".tabs"),panel=document.getElementById("panel");
+function show(i){
+  tabs.querySelectorAll("button").forEach(function(b,j){b.setAttribute("aria-selected",j===i)});
+  panel.innerHTML="<h3>"+R[i][0]+"</h3><p><i>"+R[i][1]+"</i></p><p>"+R[i][2]+"</p>";
+}
+R.forEach(function(r,i){
+  var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=r[0];
+  b.onclick=function(){show(i)};tabs.appendChild(b);
+});
+show(0);
+</script>
+</body>
+</html>
